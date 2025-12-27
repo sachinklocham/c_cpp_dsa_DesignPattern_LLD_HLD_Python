@@ -1,0 +1,1 @@
+Want to put all type of code snippet here from different area's where Go language is used or can be used.
