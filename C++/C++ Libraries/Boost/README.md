@@ -1,0 +1,1 @@
+Applications and how to use Boost library effectively and how to include in your project.
