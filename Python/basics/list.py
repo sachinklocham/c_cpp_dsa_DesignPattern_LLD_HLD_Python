@@ -126,3 +126,23 @@ for line in fhand:
     words = line.split('.')
     print(words[2])  # Print the third word from lines starting with 'From ' => com
 fhand.close()
+l11 = [1, 2, 3]
+l12 = [4, 5, 6]
+l13 = l11.append(l12)
+print(l11)  # Output: [1, 2, 3, [4, 5, 6]]
+print(l13)  # Output: None
+l13 = l11 + l12
+print(l13)  # Output: [1, 2, 3, 4, 5, 6]
+
+fname = input("Enter file name: ") # test.txt
+fh = open(fname)
+lst = list()
+for line in fh:
+    line = line.rstrip()
+    words = line.split()
+    for word in words:
+        if word not in lst:
+            lst.append(word)
+# print(lst.sort())  # Output: None first sort then print
+lst.sort()
+print(lst)  # Output: Sorted list of unique words from the file
