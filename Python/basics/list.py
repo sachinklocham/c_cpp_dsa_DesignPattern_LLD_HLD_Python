@@ -146,3 +146,6 @@ for line in fh:
 # print(lst.sort())  # Output: None first sort then print
 lst.sort()
 print(lst)  # Output: Sorted list of unique words from the file
+
+
+
