@@ -26,8 +26,53 @@ Space → O(n)
 
 */
 #include <iostream>
+#include <vector>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& numbers, int target) {
+        int i = 0;
+        int j = numbers.size() - 1;
+
+        while (i < j) {
+            int sum = numbers[i] + numbers[j];
+
+            if (sum > target) {
+                j--;
+            } 
+            else if (sum < target) {
+                i++;
+            } 
+            else { // sum == target
+                break;
+            }
+        }
+
+        // as array is 1-indexed in the problem
+        return {i + 1, j + 1};
+    }
+};
 
 int main() {
+    int n;
+    cout << "Enter number of elements: ";
+    cin >> n;
+
+    vector<int> numbers(n);
+    cout << "Enter sorted array elements:\n";
+    for (int i = 0; i < n; i++) {
+            cin >> numbers[i];
+    }
+
+    int target;
+    cout << "Enter target: ";
+    cin >> target;
+
+    Solution s;
+    vector<int> result = s.twoSum(numbers, target);
+
+    cout << "Indices (1-indexed): " << result[0] << " " << result[1] << endl;
 
     return 0;
-} 
+}
