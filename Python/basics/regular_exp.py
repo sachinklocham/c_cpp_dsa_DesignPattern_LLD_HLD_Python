@@ -39,6 +39,13 @@
 # (      — extraction start
 # )      — extraction end
 '''
+🧠 Quick summary
+Pattern	Meaning
+$	End of line / string
+^	Start of line / string
+/m	Makes ^ and $ work per line
+\$	Literal dollar sign
+
 Examples
 Digits
 ^\d+$
@@ -69,4 +76,19 @@ print(y2)
 print(y3)
 print(y4)
 
+#extract 'uct.ac.za' from this string using re.findall?
+str1 = 'From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008'
+# y5 = re.findall('@(\S+)', str1) #['uct.ac.za']
+#y5 = re.findall('@\S+', str1) #['@uct.ac.za']
+#y5 = re.findall('F.+:', str1) #['From stephen.marquard@uct.ac.za Sat Jan  5 09:14:']
+#y5 = re.findall('..@\S+..', str1) #['rd@uct.ac.za S']
+y5 = re.findall('\S+?@\S+', str1) #['uct.ac.za']
+print(y5)
 
+str2 = 'hello $achin'
+y6 = re.findall('$', str2) #['achin']
+print(y6)
+
+x = 'From: Using the : character'
+y = re.findall('^F.+:', x)
+print(y)
