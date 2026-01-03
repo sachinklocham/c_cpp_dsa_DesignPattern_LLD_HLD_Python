@@ -86,9 +86,9 @@ y5 = re.findall('\S+?@\S+', str1) #['uct.ac.za']
 print(y5)
 
 str2 = 'hello $achin'
-y6 = re.findall('$', str2) #['achin']
+y6 = re.findall('$', str2) #['']
 print(y6)
 
 x = 'From: Using the : character'
-y = re.findall('^F.+:', x)
+y = re.findall('^F.+:', x)#['From: Using the :']
 print(y)
