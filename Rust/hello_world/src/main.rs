@@ -7,6 +7,11 @@ fn main() {
     println!("Apples in garden: {}", apples_in_garden);
     let oranges = 30+10; // variable binding, assignment, snakeCase, i32 deduced
     println!("Oranges in garden: {}", oranges);
+    println!("Oranges in garden: {} apples in garden {}", oranges, apples_in_garden); // multiple placeholders oranges at 0 position , apples_in_garden at 1 position
     println!("Total fruits in garden: {}", apples_in_garden + oranges);
+    println!("Apples in garden: {}",apples_in_garden); // positional arguments in format string  
+    println!("Apples in garden: {apples_in_garden}"); // named arguments in format string   
     
+    //{} is a placeholder for value to be printed indexed from 0 left to right 
+    println!("Fruits in garden: {0} apples and {1} oranges where to get {0} more apples, and {1} more oranges", apples_in_garden, oranges);//apples_in_garden is at 0 index and oranges ar 1 index we can refer them multiple times in string with indexes
 }
