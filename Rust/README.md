@@ -172,3 +172,6 @@ $cargo run --quiet   => only shows output no intermediate prints.
 violation check: syntax or logical ....
 $cargo check
 
+---------------------------------------------------------------------------
+--------------------------- Variables -------------------------------------
+
